@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/loginStyles.css">
     <title>Login</title>
 </head>
 <body>
-    <h1>Login page</h1>
+    <div class="container">
+    <div class="left">
+    <img src="img/left.png" class="illustration"/>
+    </div>
+
+    <div class="right">
+    <div class="card">
+    <img src="img/avatar.png" class="avatar"/>
+    <h1>WELCOME</h1>
     <form action="/login" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Login</button>
+        <input type="text" name="username" placeholder="Username"/>
+        <input type="password" name="password" placeholder="Password"/>
+        <button>LOGIN</button>
     </form>
+    
+    </div>
+  </div>
+</div>
 </body>
 </html>

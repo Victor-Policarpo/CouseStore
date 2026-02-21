@@ -13,8 +13,9 @@ app.use(session({
         maxAge: 3600000
      }
 }))
-
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static('src/static'));
 app.use(express.static('src/templates/public'));
 app.use('/private', auth, express.static('src/templates/private'));
 app.use(mainRouter);
