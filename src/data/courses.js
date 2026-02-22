@@ -88,6 +88,4 @@ const courses = [
     availableSpots: 28
   }
 ];
-
-
 export default courses;
