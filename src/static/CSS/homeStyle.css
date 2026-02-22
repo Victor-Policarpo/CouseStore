@@ -3,20 +3,17 @@
     flex-wrap: wrap;
     gap: 25px;
     padding: 30px 20px;
-    justify-content: center; /* Centraliza o bloco todo */
+    justify-content: center; 
     background-color: #f8f9fa;
     margin: 0 auto;
-    
-    /* Largura máxima maior para monitores grandes */
     max-width: 1200px; 
 }
 
-/* Ajuste no Card para ele não "esticar" nem "encolher" demais */
 .course-card {
-    /* Calculando 4 colunas tirando os gaps */
-    width: calc(25% - 20px); 
-    min-width: 250px; /* Não deixa o card ficar pequeno demais no monitor de 16p */
-    max-width: 280px; /* Não deixa o card ficar gigante no monitor de 27p */
+
+    width: calc(25% - 20px);
+    min-width: 250px;
+    max-width: 280px;
     
     background: #fff;
     border: 1px solid #d1d7dc;
@@ -71,7 +68,7 @@
 }
 
 .nav-container {
-    max-width: 1200px; /* Mesmo valor do container de cursos */
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -105,6 +102,15 @@ nav a:hover {
 
 .btn-logout:hover {
     background-color: #f7f9fa;
+}
+
+.course-card-link {
+    text-decoration: none;
+    color: inherit;     
+    display: block;
+}
+.course-card-link:hover {
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {

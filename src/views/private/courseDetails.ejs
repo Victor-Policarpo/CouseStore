@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/courseStyle.css">
+    <title>Course Details</title>
+</head>
+<body>
+<div class="course-page-container">
+    <div class="course-main-info">
+        <h1><%= course.title %></h1>
+        <p><%= course.description %></p>
+        
+        <ul>
+            <li><strong>Instrutor:</strong> <%= course.instructor %></li>
+            <li><strong>Nível:</strong> <%= course.level %></li>
+            <li><strong>Carga Horária:</strong> <%= course.duration %></li>
+            <li><strong>Vagas Disponíveis:</strong> <%= course.availableSpots %></li>
+        </ul>
+    </div>
+
+    <div class="course-purchase-card">
+        <img src="<%= course.image %>" alt="Course Image">
+    
+        <div class="purchase-content">
+            <h2 id="unit-price" data-price="<%= course.price %>">
+                R$ <%= course.price.toFixed(2).replace('.', ',') %>
+            </h2>
+
+            <div class="quantity-selector">
+                <label for="vagas">Number of vacancies:</label>
+                <input type="number" id="quantity-input" name="vacancies" value="1" min="1" max="<%= course.availableSpots %>">
+            </div>
+
+            <div class="total-box">
+                <span>Total: </span>
+                <strong id="total-display">R$ <%= course.price.toFixed(2).replace('.', ',') %></strong>
+            </div>
+
+            <button class="btn-buy">Confirmar Inscrição</button>
+            <a href="/private/home" class="btn-back">← Voltar para a Home</a>
+        </div>
+    </div>
+</div>
+
+<script src="/JS/detailsCalculations.js"></script>
+
+</body>
+</html>

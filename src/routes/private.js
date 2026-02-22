@@ -15,4 +15,15 @@ router.get("/logout", (req, res) => {
         res.redirect('/login');
     });
 });
+
+router.get('/course/:title', auth, (req, res) => {
+    const courseTitle = req.params.title;
+
+    const course = courses.find(c => c.title === courseTitle);
+    if (!course) {
+        return res.redirect('/private/home');
+    }
+    res.render(path.resolve('src/views/private/courseDetails.ejs'), { course });
+});
+
 export default router;

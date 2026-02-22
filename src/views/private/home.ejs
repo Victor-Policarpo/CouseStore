@@ -19,14 +19,16 @@
         
     <div class="courses-container">
         <% courses.forEach(course => { %>
-            <div class="course-card">
-                <img src="<%= course.image %>" alt="Imagem do curso">
-                <div class="course-info">
-                    <h3><%= course.title %></h3>
-                    <p class="instructor"><%= course.instructor %></p>
-                    <p class="price">R$ <%= course.price %></p>
+            <a href="/private/course/<%= course.title %>" class="course-card-link">
+                <div class="course-card">
+                    <img src="<%= course.image %>" alt="Course Image">
+                    <div class="course-info">
+                        <h3><%= course.title %></h3>
+                        <p class="instructor"><%= course.instructor %></p>
+                        <p class="price">R$ <%= course.price %></p>
+                    </div>
                 </div>
-            </div>
+            </a>
         <% }) %>
     </div>
 
