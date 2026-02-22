@@ -21,7 +21,6 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('src/static'));
 app.use(express.static('src/views/public'));
-app.use('/private', auth, express.static('src/views/private'));
 app.use(mainRouter);
 app.listen(3000, () => {
   console.log('Server is running...');

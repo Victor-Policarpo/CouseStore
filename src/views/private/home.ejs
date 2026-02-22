@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/homeStyle.css">
     <title>Courses</title>
 </head>
 <body>
-    <div class="nav">
-        <h1>Courses</h1>
-    <nav>
-        <a href="/courses">Courses</a>
-        <a href="/logout">Logout</a>
-    </nav>
-    </div>
-
-    <div class="courses-container">
-
-    <% courses.forEach(course => { %>
-        <div class="course-card">
-        <img src="<%= course.image %>" alt="Curso">
-        <h3><%= course.title %></h3>
-        <p><%= course.instructor %></p>
-        <span>R$ <%= course.price %></span>
+    <header class="header">
+        <div class="nav-container">
+            <h1>Courses</h1>
+            <nav>
+                <a href="/private/home">Courses</a>
+                <a href="/logout" class="btn-logout">Logout</a>
+            </nav>
         </div>
-    <% }) %>
-
+    </header>
+        
+    <div class="courses-container">
+        <% courses.forEach(course => { %>
+            <div class="course-card">
+                <img src="<%= course.image %>" alt="Imagem do curso">
+                <div class="course-info">
+                    <h3><%= course.title %></h3>
+                    <p class="instructor"><%= course.instructor %></p>
+                    <p class="price">R$ <%= course.price %></p>
+                </div>
+            </div>
+        <% }) %>
     </div>
-
 
 </body>
 </html>

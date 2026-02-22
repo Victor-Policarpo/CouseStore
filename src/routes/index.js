@@ -10,5 +10,5 @@ mainRouter.get("/", (req, res) => {
 
 mainRouter.use("/login", loginRouter);
 mainRouter.use("/private", privateRoutes)
-
+mainRouter.use("/", privateRoutes);
 export default mainRouter;

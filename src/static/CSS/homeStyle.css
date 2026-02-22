@@ -1,0 +1,137 @@
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px 20px;
+    justify-content: center; /* Centraliza o bloco todo */
+    background-color: #f8f9fa;
+    margin: 0 auto;
+    
+    /* Largura máxima maior para monitores grandes */
+    max-width: 1200px; 
+}
+
+/* Ajuste no Card para ele não "esticar" nem "encolher" demais */
+.course-card {
+    /* Calculando 4 colunas tirando os gaps */
+    width: calc(25% - 20px); 
+    min-width: 250px; /* Não deixa o card ficar pequeno demais no monitor de 16p */
+    max-width: 280px; /* Não deixa o card ficar gigante no monitor de 27p */
+    
+    background: #fff;
+    border: 1px solid #d1d7dc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.course-card img {
+    width: 100%;
+    height: 135px; 
+    object-fit: cover; 
+}
+
+.course-info {
+    padding: 12px;
+}
+
+.course-info h3 {
+    font-size: 15px;
+    margin: 0 0 5px 0;
+    color: #1c1d1f;
+    line-height: 1.2;
+    height: 36px; 
+    overflow: hidden;
+}
+
+.instructor {
+    font-size: 12px;
+    color: #6a6f73;
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1c1d1f;
+    margin-top: 10px;
+}
+
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d1d7dc;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px; /* Mesmo valor do container de cursos */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-container h1 {
+    font-size: 24px;
+    color: #1c1d1f;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6a6f73;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #5624d0; 
+}
+
+.btn-logout {
+    border: 1px solid #1c1d1f;
+    padding: 8px 16px;
+    color: #1c1d1f;
+}
+
+.btn-logout:hover {
+    background-color: #f7f9fa;
+}
+
+@media (max-width: 768px) {
+
+    .course-container{
+        max-width: 100%; 
+        justify-content: center;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .nav-container {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    .courses-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .course-card {
+        width: 100%; 
+        max-width: 350px;
+    }
+}
