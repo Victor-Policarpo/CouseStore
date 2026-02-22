@@ -1,4 +1,3 @@
-// Este script roda no navegador do usuário
 const quantityInput = document.getElementById('quantity-input');
 const unitPriceElement = document.getElementById('unit-price');
 const totalDisplay = document.getElementById('total-display');
