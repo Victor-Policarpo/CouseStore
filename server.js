@@ -1,6 +1,7 @@
 import express from 'express';
 import session from 'express-session';
 import mainRouter from './src/routes/index.js';
+import db from './src/config/db.js';
 import auth from './src/middlewares/auth.js'
 
 const app = express();
@@ -17,10 +18,19 @@ app.use(session({
 }))
 
 app.set("view engine", "ejs");
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('src/static'));
 app.use(express.static('src/views/public'));
 app.use(mainRouter);
-app.listen(3000, () => {
-  console.log('Server is running...');
-});
+db.authenticate()
+    .then(() => {
+        console.log('Database connected');
+        return db.sync();
+    })
+    .then(() => {
+        app.listen(3000, () => {
+            console.log('Server is running...');
+        });
+    })
+    .catch(err => console.error('Error starting server:', err));
