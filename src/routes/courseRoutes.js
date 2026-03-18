@@ -21,19 +21,17 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.patch('/:id', async (req, res) => {
+app.put('/:id', async (req, res) => {
     try {
         const course = await Course.findByPk(req.params.id);
         
         if (!course) {
             return res.status(404).json({ error: 'Course not found' });
         }
-
         await course.update(req.body); 
-        res.status(200).json(course);
-
+        return res.status(200).json(course);
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        return res.status(400).json({ error: error.message });
     }
 });
 
