@@ -1,4 +1,4 @@
-# 🎓 Course Hub - CRUD & Auth System
+# CourseStore - CRUD & Auth System
 
 Sistema de gerenciamento de cursos desenvolvido para a atividade de "Programacao para a Internet" da faculdade. O projeto simula uma plataforma de ensino (estilo Udemy) com autenticação de usuários, rotas protegidas e persistência em banco de dados MySQL.
 
