@@ -129,12 +129,3 @@ nav a:hover {
     font-weight: 700;
     color: #1c1d1f;
 }
-
-@media (max-width: 768px) {
-    .courses-container {
-        justify-content: center;
-    }
-    .nav-container {
-        padding: 10px;
-    }
-}
