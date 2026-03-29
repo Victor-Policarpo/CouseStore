@@ -1,7 +1,11 @@
-import { Sequelize } from 'sequelize';
-const sequelize = new Sequelize('course_store', 'root', '1234', {
+import mysql from 'mysql2/promise';
+const pool = mysql.createPool({
     host: 'localhost',
-    dialect: 'mysql'
+    user: 'root',
+    password: '1234',
+    database: 'course_store',
+    waitForConnections: true,
+    connectionLimit: 10
 });
 
-export default sequelize;
+export default pool;

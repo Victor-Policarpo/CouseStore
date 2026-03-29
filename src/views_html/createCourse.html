@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/homeStyle.css"> 
+    <link rel="stylesheet" href="/CSS/editStyle.css">
+    <title>Create New Course - Instructor</title>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <h1>Course Hub <span style="font-weight: 300; font-size: 16px;">| New Content</span></h1>
+            <nav>
+                <a href="/private/home">Back to Feed</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="edit-container"> <section id="create-section">
+            <div class="edit-header">
+                <h2>Create Your Course</h2>
+                <p>Fill in the details below to launch your new course on the platform.</p>
+            </div>
+
+            <form id="createForm">
+                <div class="form-group">
+                    <label>Course Title</label>
+                    <input type="text" id="create-title" placeholder="e.g. Complete Web Development Bootcamp" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Instructor Name</label>
+                        <input type="text" id="create-instructor" placeholder="Instructor Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Price (R$)</label>
+                        <input type="number" id="create-price" placeholder="0.00" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" id="create-image" placeholder="https://link-to-thumbnail.jpg" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="create-description" rows="5" placeholder="Detailed course curriculum and objectives..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Level</label>
+                        <select id="create-level">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <input type="text" id="create-duration" placeholder="Ex: 20 hours">
+                    </div>
+                    <div class="form-group">
+                        <label>Available Spots</label>
+                        <input type="number" id="create-spots" placeholder="100">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">Publish Course</button>
+                </div>
+            </form>
+            <div id="feedback-message" style="margin-top: 20px; text-align: center; font-weight: 700;"></div>
+        </section>
+    </main>
+
+    <script src="/JS/createCourse.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/courseStyle.css">
+    <title>Detalhes do Curso</title>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <h1>Course Hub</h1>
+        </div>
+    </header>
+
+    <main class="course-page-container">
+        <section class="course-main-info">
+            <h1 id="details-title">Carregando...</h1>
+            <p id="details-description" style="margin-bottom: 20px; color: #6a6f73;"></p>
+
+            <ul>
+                <li><strong>Instrutor:</strong> <span id="details-instructor"></span></li>
+                <li><strong>Nível:</strong> <span id="details-level"></span></li>
+                <li><strong>Duração:</strong> <span id="details-duration"></span></li>
+                <li><strong>Vagas Disponíveis:</strong> <span id="details-spots"></span></li>
+            </ul>
+        </section>
+
+        <aside class="course-purchase-card">
+            <img id="details-image" src="" alt="Thumbnail" class="detail-img">
+            <div class="purchase-content">
+                <div id="unit-price-container">
+                    <span id="unit-price" data-price="0">R$ 0,00</span>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity-input">Quantidade de licenças:</label>
+                    <input type="number" id="quantity-input" value="1" min="1">
+                </div>
+
+                <div class="total-box">
+                    <span>Total:</span>
+                    <strong id="total-display">R$ 0,00</strong>
+                </div>
+
+                <button class="btn-buy" onclick="alert('Funcionalidade de compra em breve!')">Comprar agora</button>
+                <a href="/private/home" class="btn-back">Ver outros cursos</a>
+                <button onclick="goToEdit()" class="btn-edit-course">Editar este Curso</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="/JS/details.js"></script>
+</body>
+</html>

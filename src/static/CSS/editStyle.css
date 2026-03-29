@@ -1,0 +1,113 @@
+.edit-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.edit-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d1d7dc;
+    padding-bottom: 15px;
+}
+
+.edit-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.edit-header p {
+    color: #6a6f73;
+    font-size: 14px;
+}
+
+#updateForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1c1d1f;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border: 1px solid #1c1d1f;
+    border-radius: 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid #5624d0;
+    outline-offset: -1px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-save {
+    flex: 2;
+    background-color: #1c1d1f;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-save:hover {
+    background-color: #3e4143;
+}
+
+.btn-delete {
+    flex: 1;
+    background-color: transparent;
+    color: #b32d1f;
+    border: 1px solid #b32d1f;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #fff1f0;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+}

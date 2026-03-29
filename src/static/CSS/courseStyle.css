@@ -13,17 +13,19 @@ body {
 
 .course-page-container {
     display: flex;
-    max-width: 1100px;
+    flex-direction: row;
+    max-width: 1180px;
     margin: 40px auto;
     gap: 40px;
-    padding: 20px;
+    padding: 0 20px;
     align-items: flex-start;
 }
 
 .course-main-info {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
+    flex: 2; 
+    min-width: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .course-main-info h1 {
@@ -54,15 +56,15 @@ body {
     border-bottom: 1px solid #f2f2f2;
     padding-bottom: 8px;
 }
+
 .course-purchase-card {
-    flex: 1;
+    flex: 0 0 350px;
     background: #ffffff;
     border: 1px solid #d1d7dc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 10;
 }
 
 .detail-img {
@@ -70,6 +72,15 @@ body {
     height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #d1d7dc;
+}
+
+#details-description {
+    font-size: 16px;
+    color: #1c1d1f;
+    margin-bottom: 30px;
+    white-space: pre-line;
+    display: block;
+    width: 100%;
 }
 
 .purchase-content {
@@ -134,11 +145,11 @@ body {
     transition: background-color 0.2s;
 }
 
-.btn-buy:hover, .btn-back:hover{
+.btn-buy:hover, .btn-back:hover, .btn-edit-course:hover{
     background-color: #8710d8;
 }
 
-.btn-back {
+.btn-back, .btn-edit-course {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,6 +166,7 @@ body {
     transition: background 0.2s;
     cursor: pointer;
 }
+
 
 @media (max-width: 768px) {
     .course-page-container {

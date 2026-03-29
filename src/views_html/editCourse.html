@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/homeStyle.css"> <link rel="stylesheet" href="/CSS/editStyle.css">
+    <title>Edit Course - Admin</title>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <h1>Course Hub <span style="font-weight: 300; font-size: 16px;">| Instructor Mode</span></h1>
+            <nav>
+                <a href="/private/home">Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="edit-container">
+        <section id="edit-section">
+            <div class="edit-header">
+                <h2>Edit Course Details</h2>
+                <p>Modify the information below to update your course content.</p>
+            </div>
+
+            <form id="updateForm">
+                <div class="form-group">
+                    <label>Course Title</label>
+                    <input type="text" id="edit-title" placeholder="e.g. React - The Complete Guide" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Instructor Name</label>
+                        <input type="text" id="edit-instructor" placeholder="Instructor" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Price (R$)</label>
+                        <input type="number" id="edit-price" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" id="edit-image" placeholder="https://image-url.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="edit-description" rows="5" placeholder="What will students learn?"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Level</label>
+                        <select id="edit-level">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <input type="text" id="edit-duration" placeholder="Ex: 40 hours">
+                    </div>
+                    <div class="form-group">
+                        <label>Available Spots</label>
+                        <input type="number" id="edit-spots" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-save" onclick="updateCourse(event)">Save Changes</button>
+                    <button type="button" class="btn-delete" onclick="deleteCourse()">Delete Course</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="/JS/editCourse.js"></script>
+</body>
+</html>
