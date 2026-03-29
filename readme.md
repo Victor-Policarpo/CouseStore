@@ -35,4 +35,4 @@ Sistema de gerenciamento de cursos desenvolvido para a atividade de "Programacao
 
 
 ---
-Desenvolvido por **Victor** - Let it happen! 🚀
+Desenvolvido por **Victor Hugo Policarpo da Silva**
